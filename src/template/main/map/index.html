@@ -1,0 +1,162 @@
+@@include('src/template/include/_head.html')
+</head>
+
+<body>
+
+    @@include('src/template/include/_header.html')
+
+    <div class="sub value_map">
+        @@include('src/template/include/about/_sub_top.html', {
+        "title": "오시는길",
+        "sub_title": "아름다운 동해와 청초호, 수려한 설악의 경관을 품고 있는 속초 씨레이크호텔입니다."
+        })
+
+        <div class="value_map_info container">
+            <div class="value_map_info_top">
+                <div class="value_map_info_item_wrap">
+                    <!-- <div class="map_address">
+                        <p><strong>주소</strong>강원도 강릉시 주문진읍 주문로 59</p>
+                        <p><strong>이메일</strong>valuehotelgangneung@ebiznetworks.co.kr</p>
+                        <p><strong>전화</strong>1666-1243</p>
+                    </div> -->
+                    <!-- <div id="map_box" class="map_box" style="position: relative; display: block;">
+                        
+                    </div> -->
+                    <!-- 1. 지도 노드 -->
+                    <div id="daumRoughmapContainer1604393820622" class="root_daum_roughmap root_daum_roughmap_landing kakao-map" style="width: 100%;"></div>
+                    
+                    <script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+
+                    <!-- 실행 스크립트 -->
+                    <script charset="UTF-8">
+                        
+                        let mapWidth = $(".kakao-map").outerWidth();
+                        let currentHeight = (mapWidth*500) / 1090 + ((1090/mapWidth - 1) * 40);
+                        $(window).resize(function(){
+                            let mapWidth = $(".kakao-map").outerWidth();
+                            currentHeight = (mapWidth*500) / 1090 + ((1090/mapWidth - 1) * 40);
+                            console.log(currentHeight);
+                            $(".kakao-map .wrap_map").css("height", currentHeight);
+                            
+                        });
+                        new daum.roughmap.Lander({
+                            "timestamp" : "1604393820622",
+		                    "key" : "22s4k",
+                            "mapHeight" : currentHeight
+                        }).render();
+                    </script>
+                    <br>
+                    <table class="map-tbl">
+                        <colgroup>
+                            <col>
+                            <col>
+                        </colgroup>
+                        <tr>
+                            <th>도로명주소</th>
+                            <td>24837 강원도 속초시 청초호반로 273</td>
+                        </tr>
+                        <tr>
+                            <th>지번주소</th>
+                            <td>24837 강원도 속초시 청학동 482-525</td>
+                        </tr>
+                        <tr>
+                            <th>대표번호</th>
+                            <td>033-590-4002(프론트), 1666-1243(예약실)</td>
+                        </tr>
+                        <tr>
+                            <th>주변버스 정류장</th>
+                            <td>
+                                KT 정류장 (호텔까지 80미터 거리 / 도보 1분)
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>주변교통편</th>
+                            <td>
+                                [버스이용]<br>
+                                속초시외버스터미널 정류장에서 수복탑 방면 버스승차(77, 1-1, 3, 3-1, 7-1, 9-1, 88번 버스) → KT 정류장 하차(4개 정류장 5분 소요) → 호텔까지 남서쪽으로 70m 도보이동(1분 소요)
+                                <br><br>
+                                [기차이용]<br>
+                                양양국제공항 → 택시이용 → 호텔까지 16km 이동(30분 소요)
+                                <br>
+                                
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="value_map_info_item">
+                <div class="value_map_info_item_wrap">
+                    <p><strong>자가용 이용 시</strong></p>
+                    <div class="sh_small_wrapper">
+                        <div class="sh_small c-black title">
+                            ▶서울
+                        </div>
+                        <div class="sh_small c-black">
+                            서울양양고속도로 → 동해고속도로(삼척-속초) (2시간 10분 소요)
+                        </div>
+                        <div class="sh_small c-black title">
+                            ▶대전
+                        </div>
+                        <div class="sh_small c-black">
+                            중부고속도로 → 중앙고속도로 → 서울양양고속도로 (3시간 30분 소요)
+                        </div>
+                        <div class="sh_small c-black title">
+                            ▶대구
+                        </div>
+                        <div class="sh_small c-black">
+                            중앙고속도로 → 서울양양고속도로 → 동해고속도로 (삼척-속초) (4시간 소요)
+                        </div>
+                        <div class="sh_small c-black title">
+                            ▶광주
+                        </div>
+                        <div class="sh_small c-black">
+                            호남고속도로 → 중부고속도로 → 서울양양고속도로 (5시간 10분 소요)
+
+                        </div>
+                        <div class="sh_small c-black title">
+                            ▶부산
+                        </div>
+                        <div class="sh_small c-black">
+                            중앙고속도로(부산-대구) → 중앙고속도로 → 서울양양고속도로 (5시간 10분 소요)
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="value_map_info_item margin-bottom-30">
+                <div class="value_map_info_item_wrap">
+                    <p><strong>버스이용 시</strong></p>
+                    <div class="sh_small_wrapper">
+                        <div class="sh_small c-black title">
+                            ▶서울
+                        </div>
+                        <div class="sh_small c-black">
+                            동서울터미널 → 속초고속버스터미널(2시간 20분 소요)
+                        </div>
+                        <div class="sh_small c-black title">
+                            ▶대전
+                        </div>
+                        <div class="sh_small c-black">
+                            대전복합터미널 → 속초고속버스터미널(4시간 20분 소요)
+                        </div>
+                        <div class="sh_small c-black title">
+                            ▶대구
+                        </div>
+                        <div class="sh_small c-black">
+                            대구북부시외버스터미널 → 속초고속버스터미널(5시간 소요)
+                        </div>
+                        <div class="sh_small c-black title">
+                            ▶부산
+                        </div>
+                        <div class="sh_small c-black">
+                            부산종합버스터미널 → 속초고속버스터미널(2시간 30분 소요)
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @@include('src/template/include/_footer.html')
+</body>
+
+</html>
