@@ -6,9 +6,10 @@
     @@include('src/template/include/_header.html')
 
     <div class="sub value_map">
-        @@include('src/template/include/about/_sub_top.html', {
+        @@include('src/template/include/about/_sub_top_v2.html', {
         "title": "오시는길",
-        "sub_title": "아름다운 동해와 청초호, 수려한 설악의 경관을 품고 있는 속초 씨레이크호텔입니다."
+        "sub_title": "아름다운 동해와 청초호, 수려한 설악의 경관을 품고 있는 속초 씨레이크호텔입니다.",
+        "path":"../.."
         })
 
         <div class="value_map_info container">
@@ -37,13 +38,14 @@
                             currentHeight = (mapWidth*500) / 1090 + ((1090/mapWidth - 1) * 40);
                             console.log(currentHeight);
                             $(".kakao-map .wrap_map").css("height", currentHeight);
-                            
+                            $(".kakao-map .roughmap_lebel_text").hide();
                         });
                         new daum.roughmap.Lander({
                             "timestamp" : "1604393820622",
 		                    "key" : "22s4k",
                             "mapHeight" : currentHeight
                         }).render();
+                        
                     </script>
                     <br>
                     <table class="map-tbl">
